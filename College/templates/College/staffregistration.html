@@ -1,0 +1,16 @@
+<form action="." method="post" enctype="multipart/form-data">
+   {% csrf_token %}
+  {% for field in form1 %}
+    {{ field.label_tag }} {{ field }}
+  {% endfor %}
+
+
+  {% csrf_token %}
+  {% for field in form2 %}
+    {{ field.label_tag }} {{ field }}
+  {% endfor %}
+
+
+  <input "btn" type="submit" value="submit">
+</form>
+
